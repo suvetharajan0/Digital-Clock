@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(90deg, white, rgb(198, 160, 251), white);
+    position: relative;
+}
+@font-face{
+    font-family: digital7;
+    src: url('./fonts/digital-7.ttf') format('truetype');
+}
+.frame{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   margin: 100px auto;
+   gap: 20px;
+   width: 500px;
+   height: 200px;
+   background-color: rgb(191, 165, 251);
+   border-radius: 30px;
+   transform: 0.3s;  
+   box-shadow: 0 20px 30px rgba(127, 59, 223, 0.7);
+}
+ h2{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 600px;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(75, 7, 159);
+}
+.digital-clock{
+    background-color: rgb(217, 190, 246);
+    font-family: digital7;
+    color:  rgb(75, 7, 159);
+    padding: 50px 140px;
+    width: 400px;
+    height: 180px;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 8px 12px rgba(187, 142, 235, 0.7);
+
+}
+.digital-clock::before{
+    content: attr(data-text);
+    position: absolute;
+    font-family: digital7;
+    color:  gray;
+    padding: 50px 140px;
+    font-weight:normal;
+   font-size: 52px;
+    left:30%;
+    z-index:0;
+    width:auto;
+    white-space: nowrap;
+    padding: 0;
+    pointer-events: none;
+}
+
+#clock{
+    position: fixed;
+    right:41%;
+    font-family: digital7, monospace !important;
+    font-weight: bold;
+    font-size: 52px;
+    z-index:1;
+}
